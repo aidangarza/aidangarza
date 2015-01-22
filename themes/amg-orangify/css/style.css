@@ -1,0 +1,876 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  color: #ffffff;
+}
+
+html {
+	background: #2c3e50;
+}
+
+body {
+	background: #202020;
+}
+
+/* ------------------------------- | AMG
+// Typography
+// ------------------------------- */
+h1, h2, h3, h4, h5, h6, p, a {
+	font-family: "Droid Sans", sans-serif;
+}
+h1 {
+	color: #39d084;
+	margin-top: 0;
+}
+p {
+	font-size: 18px;
+	line-height: 35px;
+}
+
+/* ------------------------------- | AMG
+// Common
+// ------------------------------- */
+.amg-button-wrap {
+	text-align: center;
+}
+.amg-button {
+	display: inline-block;
+	padding: 20px 60px;
+	background: #39d084;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 26px;
+	margin: 30px 0;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+.amg-button i {
+	margin-right: 10px;
+}
+.amg-button:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background: #11d170;
+}
+.amg-ratio-saver-wrap {
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.amg-dummy {
+	margin-top: 75%;
+}
+.amg-ratio-saver {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.amg-brag {
+	text-align: right;
+}
+.amg-brag i {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	vertical-align: top;
+}
+.amg-flexbox {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;  
+}
+.amg-codepen {
+	display: inline-block;
+	opacity: 0.8;
+	color: #FFFFFF;
+}
+.amg-codepen img {
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+}
+.amg-codepen:hover {
+	opacity: 1;
+	color: #39d084;
+	text-decoration: none;
+}
+
+/* ------------------------------- | AMG
+// Sliders
+// ------------------------------- */
+.amg-slider-slide {
+	padding: 15px;
+	padding-bottom: 35px;
+}
+.amg-slider-wrap {
+	position: relative;
+}
+.amg-control-nav {
+	position: absolute;
+	bottom: 18px;
+	width: 100%;
+	text-align: center;
+}
+.amg-control-nav a {
+	display: inline-block;
+	margin: 0 15px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #39d084;
+}
+.amg-control-nav a.active {
+	background: #39d084;
+}
+
+/* ------------------------------- | AMG
+// Navigation
+// ------------------------------- */
+.amg-navbar {
+	height: 50px;
+	background: #FF8D00;
+	border-radius: 0;
+	border: none;
+	margin: 0;
+}
+.amg-navbar-collapse {
+	text-align: center;
+}
+.amg-navbar-nav {
+	display: inline-block;
+	margin: 0 auto;
+	float: none;
+}
+.amg-navbar-nav li {
+	padding: 5px;
+}
+.amg-navbar-nav li a {
+	padding: 10px 15px 10px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 18px;
+	border-radius: 20px;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.amg-navbar-nav li a:hover {
+	background: #2c3e50;
+	border-radius: 20px;
+}
+.amg-brand {
+	padding: 5px;
+}
+.amg-brand img {
+	height: 100%;
+	border-radius: 50%;
+	border: 2px solid #ffffff;
+}
+.open.amg-overlay {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 2;
+}
+.mobile-nav {
+	display: none;
+}
+
+/* ------------------------------- | AMG
+// Floating Contact Icons
+// ------------------------------- */
+.amg-blue .amg-floating-icon, 
+.amg-blue .amg-floating-link {
+	background: #2c3e50;
+}
+.amg-orange .amg-floating-icon, 
+.amg-orange .amg-floating-link {
+	background: #ff8d00;
+}
+.amg-green .amg-floating-icon, 
+.amg-green .amg-floating-link {
+	background: #39d084;
+}
+.amg-floating-contact-wrap {
+	position: fixed;
+	right: 0px;
+	max-height: 90%;
+	font-size: 20px;
+	opacity: 0.6;
+	z-index: 999;
+}
+.amg-floating-contact-wrap:first-child {
+	top: 60px;
+}
+.amg-floating-contact-wrap:nth-child(2) {
+	top: 118px;
+}
+.amg-floating-contact-wrap:nth-child(3) {
+	top: 176px;
+}
+.amg-floating-icon, .amg-floating-link {
+	text-align: center;
+}
+.amg-floating-icon {
+	display: block;
+	width: 48px;
+	height: 48px;
+	float: left;
+	padding: 10px;
+}
+.amg-floating-icon i:before {
+	vertical-align: middle;
+}
+.amg-modal-closer {
+	display: none;
+}
+.amg-floating-link {
+	width: 0px;
+	padding: 10px 0;
+	overflow: hidden;
+	-webkit-transition: width 1s;
+	-moz-transition: width 1s;
+	-o-transition: width 1s;
+	transition: width 1s;
+}
+.amg-floating-link a,
+.amg-floating-title {
+	line-height: 27px;
+	white-space: nowrap;
+	color: rgba(255,255,255,0.7);
+	text-decoration: none;
+}
+.amg-floating-link a:hover {
+	color: rgba(255,255,255,1);
+}
+.amg-floating-link iframe, 
+.amg-floating-link a {
+	width: 240px !important;
+	margin: 0 10px;
+}
+/* Hover Effect */
+.amg-floating-contact-wrap.hover {
+	opacity: 1;
+	z-index: 99999;
+}
+.amg-floating-contact-wrap.hover .amg-floating-link {
+	width: 260px;
+}
+.amg-floating-contact-wrap.hover .amg-modal-trigger i:before {
+	content: '\e140';
+}
+/* Modals */
+.amg-floating-contacts.open {
+	display: block;
+}
+.amg-floating-contact-wrap.open {
+	top: 50% !important;
+	left: 50%;
+	right: auto;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	opacity: 1;
+	max-width: 100%;
+}
+.amg-floating-contact-wrap.open .amg-modal-trigger {
+	display: none;
+}
+.amg-floating-contact-wrap.open .amg-modal-closer {
+	display: block;
+}
+.amg-floating-contact-wrap.open .amg-floating-link {
+	width: 400px;
+	max-width: 80%;
+	padding: 10px;
+}
+.amg-floating-contact-wrap.open .amg-floating-link iframe {
+	width: 100% !important;
+	margin: 0;
+}
+
+/* ------------------------------- | AMG
+// Content
+// ------------------------------- */
+.amg-content {
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.amg-area {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+/* ------------------------------- | AMG
+// Profile
+// ------------------------------- */
+.amg-headshot {
+	text-align: right;
+}
+.amg-headshot img {
+	width: 100%;
+	max-width: 300px;
+}
+.amg-bio h1 {
+	color: #39d084;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.amg-bio h3 {
+	margin-bottom: 30px;
+}
+.amg-bio .amg-social {
+	text-align: left;
+}
+.amg-bio .amg-social-icons {
+	margin: 10px 0;
+}
+
+/* ------------------------------- | AMG
+// Skills
+// ------------------------------- */
+.amg-badge-collection {
+	background: #151515;
+	margin: 15px 0;
+}	
+.amg-badge {
+	padding: 20px 7%;
+}
+.amg-badge h3 {
+	margin: 0;
+	line-height: 50px;
+	text-align: center;
+}
+
+@media only screen and (max-width : 639px) {
+	.amg-badge {
+		width: 50%;
+		padding: 20px 10%;
+	}
+}
+
+/* ------------------------------- | AMG
+// Work
+// ------------------------------- */
+.amg-thumbnail {
+	padding: 15px;
+}
+.amg-thumbnail img {
+	width: 100%;
+}
+/* Folding Wrapper */
+.blindsWrapper {
+	display: inline-block;
+	position:relative;
+	vertical-align: top;
+	padding: 0px;
+	/* set your image size here */
+	width: 100%; height: 100%;
+	/* set the reveal background here */
+	background: rgba(0,0,0,0.1);
+	/* set the base z-index */
+	z-index: 1;
+	/* This sets the mouseover animation */
+	-webkit-transition: all .15s ease-in-out;
+	-moz-transition: all .15s ease-in-out;
+}
+/* Image Fold */
+.partOne,
+.partTwo,
+.partThree {
+	/* set the defaults */
+	position: relative;
+	display: block;
+	/* add your image */
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	/* set the borders */
+	z-index: 2;
+	/* these set any effect to null. Important to get smooth transitions */
+	-webkit-transform:perspective(0) rotateX(0) scale(1);
+	-moz-transform:perspective(0) rotateX(0) scale(1);
+	transform:perspective(0) rotateX(0) scale(1);
+	/* this sets the mouseOut animation */
+	-webkit-transition: all .15s ease-in-out;
+	-moz-transition: all .15s ease-in-out;
+}
+.partOne {
+	/* set the image height to be a third of your total size */
+	height: 33.33%;
+	/* move the image to the top left of the span */
+	background-position: 0 0;
+	/* These box-shadow effects will give the hover color change and a gradient highlight animation something to key into */
+	box-shadow: 0 1px 5px rgba(0,0,0,0), inset 0 -5px 15px rgba(255,255,255,0), 0px -1px 0 silver, -1px 0 0 silver, 1px 0 0 silver;
+}
+.partTwo {
+	/* set the image height to be a third of your total size */
+	height: 33.33%;
+	/* move the image up the same value as the span above */
+	background-position: center;
+	/* setting the middle span to be higher than the other images */
+	z-index: 3 !important;
+	/* These box-shadow effects will give the hover color change and a gradient highlight animation something to key into */
+	box-shadow: 0 1px 5px rgba(0,0,0,0), inset 0 0px 0px 66px rgba(0,0,0,0), -1px 0 0 silver, 1px 0 0 silver;
+}
+.partThree {
+	/* set the image height to be a third of your total size */
+	height: 33.33%;
+	/* move the image up the same value as both spans above */
+	background-position: center bottom;
+	/* These box-shadow effects will give the hover color change and a gradient highlight animation something to key into */
+	box-shadow: 0 10px 5px rgba(0,0,100,0), 0 16px 10px rgba(0,0,0,0), 0 4px 0 0 rgba(200,200,200,1), 0 0 0 1px silver;
+}
+.amg-thumbnail:hover .partOne, .amg-thumbnail.hover .partOne {
+	/* set the borders */
+	box-shadow: 0 1px 5px rgba(0,0,0,0.1), inset 0 -5px 15px rgba(255,255,255,0.5), 0px -1px 0 #74ceeb, -1px 0 0 #74ceeb, 1px 0 0 #74ceeb;
+	/* Animate To effect */
+	-webkit-transform:perspective(300px) rotateX(40deg) scale(1.07);
+	-moz-transform:perspective(300px) rotateX(40deg) scale(1.07);
+	transform:perspective(300px) rotateX(40deg) scale(1.07);
+	/* move the top image up */
+	top: -4%;
+}
+.amg-thumbnail:hover .partTwo, .amg-thumbnail.hover .partTwo {
+	/* set the borders */
+	box-shadow: 0 1px 5px rgba(0,0,0,0.35), inset 0 0px 0px 66px rgba(0,0,0,0.3), -1px 0 0 #74ceeb, 1px 0 0 #74ceeb;
+	/* Animate To effect */
+	-webkit-transform:perspective(300px) rotateX(-40deg) scale(1.07);
+	-moz-transform:perspective(300px) rotateX(-40deg) scale(1.07);
+	transform:perspective(300px) rotateX(-40deg) scale(1.07);
+	/* move the top image up */
+	top: -7.5%;
+}
+.amg-thumbnail:hover .partThree, .amg-thumbnail.hover .partThree {
+	/* set the borders */
+	box-shadow: 0 10px 5px rgba(0,0,150,.1), 0 16px 10px rgba(0,0,0,.15), 0 4px 0 0 #74ceeb, 0 0 0 1px #74ceeb;
+	/* Animate To effect */
+	-webkit-transform:perspective(300px) rotateX(40deg) scale(1.07);
+	-moz-transform:perspective(300px) rotateX(40deg) scale(1.07);
+	transform:perspective(300px) rotateX(40deg) scale(1.07);
+	/* move the top image up */
+	top: -16%;
+}
+/* Link to Client Site */
+.blindsWrapper a {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	color: #FFFFFF;
+}
+.blindsWrapper a:hover {
+	color: #FF8D00;
+}
+
+/* ------------------------------- | AMG
+// Plea
+// ------------------------------- */
+.amg-plea-list i {
+	display: inline-block;
+	font-size: 60px;
+	line-height: 60px;
+}
+.amg-plea-list i:before {
+	color: #FF8D00;
+}
+.amg-plea-list h3 {
+	color: #39d084;
+}
+.amg-plea-list-item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.amg-plea-wrap {
+	background: #151515;
+	padding: 15px;
+	text-align: center;
+}
+.amg-plea-wrap p {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+/* ------------------------------- | AMG
+// Clients / Testimonials
+// ------------------------------- */
+.amg-testimonial-wrap {
+	margin: 15px 0;
+	background: #151515;
+	min-height: 270px;
+}
+.amg-client-headshot {
+	text-align: center;
+	min-height: 240px;
+	line-height: 240px;
+}
+.amg-client-headshot img {
+	border-radius: 50%;
+	border: 10px solid #FFFFFF;
+	width: 100%;
+	max-width: 195px;
+	vertical-align: middle;
+}
+.amg-client-quote p {
+	min-height: 80px;
+	font-size: 36px;
+	line-height: 40px;
+	font-family: "Droid",serif;
+	padding-left: 5%;
+	color: #ff8d00;
+}
+.amg-client-name {
+	font-size: 24px;
+}
+.amg-client-title {
+	font-size: 16px;
+	line-height: 20px;
+	color: #999999;
+}
+.amg-client-name, .amg-client-title {
+	text-align: right;
+	margin: 0;
+}
+
+/* ------------------------------- | AMG
+// Resume
+// ------------------------------- */
+.amg-resume p {
+	font-size: 24px;
+	line-height: 36px;
+}
+.amg-resume .amg-button {
+	width: 100%;
+	padding: 20px;
+}
+
+/* ------------------------------- | AMG
+// Social
+// ------------------------------- */
+.amg-social {
+	text-align: center;
+	margin-left: 0px;
+}
+ul.amg-social-icons {
+	margin: 20px 0;
+	padding: 0;
+	display: inline-block;
+}
+ul.amg-social-icons li {
+	list-style: none;
+	display: inline-block;
+	margin: 10px;
+}
+ul.amg-social-icons li:first-child {
+	margin-left: 0;
+}
+ul.amg-social-icons li:last-child {
+	margin-right: 0;
+}
+ul.amg-social-icons li a {
+	opacity: 0.8;
+}
+ul.amg-social-icons li a:hover {
+	opacity: 1;
+}
+
+/* ------------------------------- | AMG
+// Footer
+// ------------------------------- */
+.amg-footer {
+	height: 50px;
+	background: #2c3e50;
+}
+.amg-footer-item:last-child {
+	text-align: right;
+}
+.amg-footer-item p, .amg-footer-item a {
+	line-height: 50px;
+	margin: 0;
+	color: #ffffff;
+}
+.amg-footer-item a {
+	margin-left: 10px;
+	text-decoration: none;
+}
+.amg-footer-item a:hover, .amg-footer-item a:hover i:before {
+	color: #39d084;
+}
+
+/* ------------------------------- | AMG
+// Tablet Portrait
+// ------------------------------- */
+@media only screen and (max-width : 767px) {
+	/* Profile */
+	.amg-bio {
+		text-align: center;
+	}
+	.amg-headshot, .amg-profile .amg-social {
+		text-align: center;
+	}
+	.amg-bio .amg-button {
+		margin: 30px auto;
+	}
+	/* Work */
+	.amg-work-wrap {
+		margin: 0;
+		background: #151515;
+	}
+	.amg-thumbnail {
+		text-align: center;
+		padding: 5%;
+	}
+	.amg-thumbnail img {
+		width: 300px;
+	}
+	/* Clients */
+	.amg-client-quote p {
+		padding: 0;
+	}
+	/* Navigation */
+	.amg-floating-contacts {
+		display: none;
+	}
+	.top-bar {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.amg-mobile-nav {
+		background: #355267;
+		bottom: -70px;
+		left: -10%;
+		height: 10.5em;
+		padding: 0 2.75em;
+		position: fixed;
+		-webkit-transform: rotate(10deg) translate3D(-10em, 20em, 0);
+		-ms-transform: rotate(10deg) translate3D(-10em, 20em, 0);
+		transform: rotate(10deg) translate3D(-10em, 20em, 0);
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+		width: 120%;
+		z-index: 5;
+	}
+
+	.amg-mobile-nav.open {
+		-webkit-transform: rotate(10deg) translate3D(0, 0, 0);
+		-ms-transform: rotate(10deg) translate3D(0, 0, 0);
+		transform: rotate(10deg) translate3D(0, 0, 0);
+		-moz-transform-origin: top center;
+		-webkit-transform-origin: top center;
+		-o-transform-origin: top center;
+		-ms-transform-origin: top center;
+		transform-origin: top center;
+	}
+
+	.amg-nav-pane {
+		width: 100%;
+		text-align: center;
+	}
+
+	.amg-nav-item {
+		position: relative;
+		top: -30px;
+		text-decoration: none;
+		text-align: center;
+		-webkit-transform: rotate(-10deg) translate3D(-5em, 10em, 0);
+		-ms-transform: rotate(-10deg) translate3D(-5em, 10em, 0);
+		transform: rotate(-10deg) translate3D(-5em, 10em, 0);
+		-webkit-transition: 0.2s ease-in-out;
+		transition: 0.2s ease-in-out;
+		-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+		-moz-box-flex: 1;         /* OLD - Firefox 19- */
+		-webkit-flex: 1;          /* Chrome */
+		-ms-flex: 1;              /* IE 10 */
+		flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	}
+	.amg-nav-item i {
+		background: #FFFFFF;
+		border: 3px solid #222;
+		border-radius: 50%;
+		color: #222;
+		display: inline-block;
+		height: 50px;
+		margin: 0 auto;
+		width: 50px;
+		font-size: 25px;
+		line-height: 44px;
+	}
+	.amg-nav-item i:before {
+		color: inherit;
+	}
+	.open .amg-nav-item:nth-child(1) {
+		-webkit-transform: rotate(-10deg) translate3D(0, 0, 0);
+		-ms-transform: rotate(-10deg) translate3D(0, 0, 0);
+		transform: rotate(-10deg) translate3D(0, 0, 0);
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+	}
+	.open .amg-nav-item:nth-child(2) {
+		-webkit-transform: rotate(-10deg) translate3D(0, 0, 0);
+		-ms-transform: rotate(-10deg) translate3D(0, 0, 0);
+		transform: rotate(-10deg) translate3D(0, 0, 0);
+		-webkit-transition-delay: 0.1s;
+		transition-delay: 0.1s;
+	}
+	.open .amg-nav-item:nth-child(3) {
+		-webkit-transform: rotate(-10deg) translate3D(0, 0, 0);
+		-ms-transform: rotate(-10deg) translate3D(0, 0, 0);
+		transform: rotate(-10deg) translate3D(0, 0, 0);
+		-webkit-transition-delay: 0.2s;
+		transition-delay: 0.2s;
+	}
+	.open .amg-nav-item:nth-child(4) {
+		-webkit-transform: rotate(-10deg) translate3D(0, 0, 0);
+		-ms-transform: rotate(-10deg) translate3D(0, 0, 0);
+		transform: rotate(-10deg) translate3D(0, 0, 0);
+		-webkit-transition-delay: 0.3s;
+		transition-delay: 0.3s;
+	}
+	.open .amg-nav-item:nth-child(5) {
+		-webkit-transform: rotate(-10deg) translate3D(0, 0, 0);
+		-ms-transform: rotate(-10deg) translate3D(0, 0, 0);
+		transform: rotate(-10deg) translate3D(0, 0, 0);
+		-webkit-transition-delay: 0.4s;
+		transition-delay: 0.4s;
+	}
+	.amg-nav-item:before {
+		font-size: 1.5em;
+		line-height: 1.75;
+	}
+
+	.top-bar__icon {
+		cursor: pointer;
+		display: block;
+		float: right;
+		font-size: 6px;
+		height: 6em;
+		margin: 1em;
+		position: relative;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-transition: 0.2s ease-in-out;
+		transition: 0.2s ease-in-out;
+		width: 6em;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.top-bar__icon span {
+		background: white;
+		border-radius: 2em;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		height: 0.8em;
+		position: absolute;
+		-webkit-transition: 0.2s ease-in-out;
+		transition: 0.2s ease-in-out;
+		-webkit-tap-highlight-color: transparent;
+		width: 50%;
+	}
+	.top-bar__icon span:nth-child(1) {
+		border-radius: 2em 0 0 2em;
+		left: 0;
+		top: 1em;
+	}
+	.top-bar__icon span:nth-child(2) {
+		border-radius: 0 2em 2em 0;
+		top: 1em;
+		right: 0;
+	}
+	.top-bar__icon span:nth-child(3) {
+		left: 0;
+		top: 2.6em;
+		width: 100%;
+	}
+	.top-bar__icon span:nth-child(4) {
+		border-radius: 2em 0 0 2em;
+		left: 0;
+		top: 4.2em;
+	}
+	.top-bar__icon span:nth-child(5) {
+		border-radius: 0 2em 2em 0;
+		right: 0;
+		top: 4.2em;
+	}
+	.top-bar__icon.open span:nth-child(1) {
+		-webkit-transform: rotate(45deg) translate(0.8em);
+		-ms-transform: rotate(45deg) translate(0.8em);
+		transform: rotate(45deg) translate(0.8em);
+	}
+	.top-bar__icon.open span:nth-child(2) {
+		-webkit-transform: rotate(-45deg) translate(-0.9em);
+		-ms-transform: rotate(-45deg) translate(-0.9em);
+		transform: rotate(-45deg) translate(-0.9em);
+	}
+	.top-bar__icon.open span:nth-child(3) {
+		opacity: 0;
+	}
+	.top-bar__icon.open span:nth-child(4) {
+		-webkit-transform: rotate(-45deg) translate(0.8em);
+		-ms-transform: rotate(-45deg) translate(0.8em);
+		transform: rotate(-45deg) translate(0.8em);
+	}
+	.top-bar__icon.open span:nth-child(5) {
+		-webkit-transform: rotate(45deg) translate(-0.9em);
+		-ms-transform: rotate(45deg) translate(-0.9em);
+		transform: rotate(45deg) translate(-0.9em);
+	}
+}
+
+/* ------------------------------- | AMG
+// Phone Landscape
+// ------------------------------- */
+@media only screen and (max-width: 480px) {
+	/* Work */
+	.amg-thumbnail {
+		width: 100%;
+		padding: 10%;
+	}
+	/* Clients */
+	.amg-client-quote p {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.amg-client-name {
+		font-size: 20px;
+	}
+}
+
+/* ------------------------------- | AMG
+// Phone Portrait
+// ------------------------------- */
+@media only screen and (max-width: 385px) {
+	/* Social */
+	.amg-social {
+		width: 100%;
+	}
+	ul.amg-social-icons {
+		width: 100%;
+		display: flex;
+	}
+	ul.amg-social-icons li {
+		flex-grow: 1;
+	}
+	ul.amg-social-icons img {
+		width: 36px;
+	}
+}

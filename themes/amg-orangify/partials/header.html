@@ -1,0 +1,116 @@
+<header class="navbar navbar-fixed-top amg-navbar clearfix" role="navigation">
+	<div class="container-fluid">
+		<nav class="navbar-header top-bar">
+			<div class="top-bar__icon js-toggle" id="js-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<a class="navbar-brand amg-brand" href="{{ config.home_url }}">
+				<img src="{{ theme_url }}/images/fedora-small.jpg" alt="">
+			</a>
+		</nav>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse amg-navbar-collapse">
+			<ul class="nav navbar-nav amg-navbar-nav">
+				<li><a href="{{ config.home_url }}"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+				
+				{% set a_href = "" %}
+				{% if current_page.title != 'Home' %}
+					{% set a_href = config.home_url %}
+				{% endif %}
+				<li><a href="{{ a_href }}#skills"><i class="glyphicon glyphicon-stats"></i> Skills</a></li>
+				<li><a href="{{ a_href }}#work"><i class="glyphicon glyphicon-picture"></i> Work</a></li>
+				<li><a href="{{ a_href }}#resume"><i class="glyphicon glyphicon-file"></i> Resume</a></li>
+
+			{% for page in pages %}
+				{% set folder = page.url|split('/')%}
+				{% if (folder[1] != 'widgets') %}
+				{% if (folder[1] != 'blog') %}
+				{% if (page.title != 'Home') %}
+				<li><a href="{{ page.url }}"><i class="glyphicon amg-navbar-icon"></i> {{ page.title }}</a></li>
+				{% endif %}
+				{% endif %}
+				{% endif %}
+			{% endfor %}
+
+				<li><a href="{{ config.home_url }}/blog/"><i class="glyphicon glyphicon-edit"></i> Blog</a></li>
+			</ul>
+		</div>
+	</div>	
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="amg-mobile-nav js-toggle">
+	<div class="amg-nav-pane amg-flexbox">
+		<a class="amg-nav-item" href="tel://1-623-396-6289">
+			<i class="glyphicon glyphicon-phone"></i>
+		</a>
+		<a class="amg-nav-item amg-modal-trigger" href="#contact">
+			<i class="glyphicon glyphicon-envelope"></i>
+		</a>
+		<a class="amg-nav-item amg-modal-trigger" href="#hire">
+			<i class="glyphicon glyphicon-send"></i>
+		</a>
+		<a class="amg-nav-item" href="{{ config.site_url }}/blog">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+	</div>
+{% for page in pages %}
+	{% set folder = page.url|split('/')%}
+	{% if folder[1] != 'widgets' %}
+	{% if (folder[1] != 'blog') %}
+	{% if (page.title != 'Home') %}
+	<a class="amg-nav-item" href="{{ page.url }}">
+		<i class="glyphicon glyphicon-{{ page.icon }}"></i>
+	</a>
+	{% endif %}
+	{% endif %}
+	{% endif %}
+{% endfor %}
+</nav>
+
+<div class="amg-floating-contacts">
+	<div id="" class="amg-floating-contact-wrap amg-green">
+		<a class="amg-floating-icon">
+			<i class="glyphicon glyphicon-phone"></i>
+		</a>
+		<div class="amg-floating-link amg-floating-phone">
+			<a class="amg-nav-item" href="tel://1-623-396-6289">(623) 396-6289</a>
+		</div>
+	</div>
+	<div id="contact" class="amg-floating-contact-wrap amg-orange">
+		<a href="#contact" class="amg-floating-icon amg-modal-trigger">
+			<i class="glyphicon glyphicon-envelope"></i>
+		</a>
+		<a href="#contact" class="amg-floating-icon amg-modal-closer">
+			<i class="glyphicon glyphicon-remove"></i>
+		</a>
+		<div class="amg-floating-link amg-floating-email">
+			<p class="amg-floating-title">Contact Me</p>
+			<!-- BEGIN Podio web form -->
+			<script src="https://podio.com/webforms/9294811/684583.js"></script>
+			<script type="text/javascript">
+			  _podioWebForm.render("684583")
+			</script>
+		</div>
+	</div>
+	<div id="hire" class="amg-floating-contact-wrap amg-blue">
+		<a href="#hire" class="amg-floating-icon amg-modal-trigger">
+			<i class="glyphicon glyphicon-send"></i>
+		</a>
+		<a href="#hire" class="amg-floating-icon amg-modal-closer">
+			<i class="glyphicon glyphicon-remove"></i>
+		</a>
+		<div class="amg-floating-link amg-floating-email">
+			<p class="amg-floating-title">Hire Me</p>
+			<!-- BEGIN Podio web form -->
+			<script src="https://podio.com/webforms/9294822/684586.js"></script>
+			<script type="text/javascript">
+			  _podioWebForm.render("684586")
+			</script>
+		</div>
+	</div>
+</div>

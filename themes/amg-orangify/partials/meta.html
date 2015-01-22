@@ -1,0 +1,9 @@
+<meta charset="utf-8" />
+
+<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+{% if meta.description %}
+<meta name="description" content="{{ meta.description }}"> 
+{% endif %}{% if meta.robots %}
+<meta name="robots" content="{{ meta.robots }}">
+{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">

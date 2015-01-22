@@ -1,0 +1,15 @@
+{% macro accordion(name, url, image) %}
+<div class="col-xs-6 col-sm-4 amg-thumbnail">
+	<div class="amg-ratio-saver-wrap">
+		<div class="amg-dummy"></div>
+		<div class="amg-ratio-saver">
+			<div class="blindsWrapper">
+				<span class="partOne" data-image="{{ image }}"></span>
+				<span class="partTwo" data-image="{{ image }}"></span>
+				<span class="partThree" data-image="{{ image }}"></span>
+				<a href="{{ url }}" target="_blank">{{ name }}</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endmacro %}

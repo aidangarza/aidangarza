@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	
+	<!-- Meta
+	================================================== -->
+	{% include "partials/meta.html" %}
+	<!-- End Meta -->
+
+	<!-- Top Links
+	================================================== -->
+	{% include "partials/toplinks.html" %}
+	<!-- End Top Links -->
+
+</head>
+<body>
+	<div class="amg-overlay js-toggle"></div>
+	
+	<!-- Header
+	================================================== -->
+	{% include "partials/header.html" %}
+	<!-- End Header -->
+	
+	<!-- Content
+	================================================== -->
+	<section class="amg-content js-toggle">
+		<div id="profile" class="container-fluid amg-area amg-profile">
+			<div class="row">
+				<div class="col-sm-5 amg-headshot">
+					<img src="{{ theme_url }}/images/mini.png" alt="Aidan M. Garza">
+				</div>
+				<div class="col-sm-7 amg-bio">
+					
+					{{ content }}
+
+					<a class="amg-button amg-modal-trigger" href="#hire"><i class="glyphicon glyphicon-send"></i>Hire Me</a>
+					
+					{% include "partials/social.html" %}
+
+				</div>
+			</div>
+		</div>
+
+		<div id="skills" class="container-fluid amg-area amg-skills">
+			<h1>My Skills</h1>
+			<div class="row amg-badge-collection">
+				<div class="col-xs-3 amg-badge">
+					<img src="{{ theme_url }}/images/HTML5_Badge.svg" alt="HTML5">
+					<h3>EXPERT</h3>
+				</div>
+				<div class="col-xs-3 amg-badge">
+					<img src="{{ theme_url }}/images/CSS3_Badge.svg" alt="CSS3">
+					<h3>EXPERT</h3>
+				</div>
+				<div class="col-xs-3 amg-badge">
+					<img src="{{ theme_url }}/images/JS_Badge.svg" alt="JavaScript">
+					<h3>EXPERT</h3>
+				</div>
+				<div class="col-xs-3 amg-badge">
+					<img src="{{ theme_url }}/images/JQ_Badge.svg" alt="JQuery">
+					<h3>EXPERT</h3>
+				</div>
+			</div>
+			<p class="amg-brag"><i class="glyphicon glyphicon-share-alt"></i><a class="amg-codepen" href="http://codepen.io/aidangarza/pen/HDKJu" target="_blank">Effect accomplished using JQuery <img src="{{ theme_url }}/images/codepen.svg" alt="View in CodePen"></a></p>
+		</div>
+
+		<div id="work" class="container-fluid amg-area amg-work">
+			<h1>My Work</h1>
+			<div class="row amg-work-wrap">
+			{% import "partials/thumbnail.html" as thumbnail %}
+
+			{% for client in config.clients %}
+				{{ thumbnail.accordion(client.name, client.url, client.image) }}
+			{% endfor %}
+			</div>
+			<p class="amg-brag"><i class="glyphicon glyphicon-share-alt"></i><a class="amg-codepen" href="http://codepen.io/aidangarza/pen/iGcqJ" target="_blank">Effect accomplished using only HTML5 and CSS3 <img src="{{ theme_url }}/images/codepen.svg" alt="View in CodePen"></a></p>
+		</div>
+
+		<div id="plea" class="container-fluid amg-area amg-plea">
+			<h1>Why choose me?</h1>
+			<div class="row amg-plea-list">
+				{% for page in pages %}
+				{% set folder = page.url|split('/')%}
+				{% if (folder[2] == 'pleas') %}
+				<div class="col-sm-4 amg-plea-list-item">
+					<div class="amg-plea-wrap">
+						<i class="glyphicon glyphicon-{{ page.icon }}"></i>
+						<h3>{{ page.title }}</h3>
+					 	{{ page.content }}
+				 	</div>
+				</div>
+				{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+
+		<div id="testimonials" class="container-fluid amg-area amg-testimonials">
+			<h1>My Clients</h1>
+			<div class="amg-slider-wrap">
+				<div id="quote_slider">
+				{% for page in pages %}
+				{% set folder = page.url|split('/')%}
+				{% if (folder[2] == 'quotes') %}
+					{% include "partials/quote.html" %}
+				{% endif %}
+				{% endfor %}
+				</div>
+				<div id="quote-slider-control-nav" class="amg-control-nav">
+				<!-- Control Nav Icons Populate Here -->
+				</div>
+			</div>
+		</div>
+
+		<div id="resume" class="container-fluid amg-area amg-resume">
+			<h1>My Resume</h1>
+			<p>Feel free to download my resume and contact info for your reference. I'm looking forward to hearing from you soon!</p>
+			<div class="col-sm-6 amg-button-wrap">
+				<a class="amg-button" href="{{ theme_url }}/documents/AidanGarza(Developer).pdf" target="_blank"><i class="glyphicon glyphicon-cloud-download"></i>Resume</a>
+			</div>
+			<div class="col-sm-6 amg-button-wrap">
+				<a class="amg-button" href="{{ theme_url }}/documents/AidanGarza.vcf" target="_blank"><i class="glyphicon glyphicon-cloud-download"></i>vCard</a>
+			</div>
+		</div>
+
+		{% include "partials/social.html" %}
+
+	</section>
+	<!-- End Content -->
+	
+	<!-- Footer
+	================================================== -->
+	{% include "partials/footer.html" %}
+	<!-- End Footer -->
+
+	<!-- Bottom Links
+	================================================== -->
+	{% include "partials/bottomlinks.html" %}
+	<!-- End Bottom Links -->
+    
+</body>
+</html>

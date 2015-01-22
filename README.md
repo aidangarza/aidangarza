@@ -1,6 +1,6 @@
-Pico
-====
+# Aidan M. Garza
 
-Pico is a stupidly simple, blazing fast, flat file CMS. See http://picocms.org/ for more info.
+## UX Architect & Front-End Developer
 
-[![I Love Open Source](http://www.iloveopensource.io/images/logo-lightbg.png)](http://www.iloveopensource.io/projects/524c55dcca7964c617000756)
+Hello! My name is Aidan (eye-den) Garza. I'm a 25 year-old, married, UX Architect & Front-End Developer in Austin, TX. I work in LAMP stack, and I can skillfully convert your PSD's and web designs into efficiently-coded HTML5 / CSS3 / Javascript / PHP websites and web apps! Let me help you with your project. You won't be disappointed.
+

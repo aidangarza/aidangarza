@@ -12,6 +12,7 @@ html {
 
 body {
 	background: #202020;
+	position: relative;
 }
 
 /* ------------------------------- | AMG
@@ -32,6 +33,11 @@ p {
 /* ------------------------------- | AMG
 // Common
 // ------------------------------- */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .amg-button-wrap {
 	text-align: center;
 }
@@ -236,6 +242,9 @@ p {
 }
 .amg-modal-closer {
 	display: none;
+	position: absolute;
+	left: 10px;
+	top: 15px;
 }
 .amg-floating-link {
 	width: 0px;
@@ -294,7 +303,7 @@ p {
 }
 .amg-floating-contact-wrap.open .amg-floating-link {
 	width: 400px;
-	max-width: 80%;
+	max-width: 100%;
 	padding: 10px;
 }
 .amg-floating-contact-wrap.open .amg-floating-link iframe {
@@ -852,6 +861,26 @@ ul.amg-social-icons li a:hover {
 	}
 	.amg-client-name {
 		font-size: 20px;
+	}
+	.amg-brag {
+		display: none;
+	}
+	.amg-floating-contacts.open {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 2000;
+	}
+	.amg-floating-contact-wrap {
+		width: 480px;
+		height: 100%;
+		max-height: 100%;
+	}
+	.amg-floating-contact-wrap.open .amg-floating-link {
+		width: 480px;
+		min-height: 100%;
 	}
 }
 

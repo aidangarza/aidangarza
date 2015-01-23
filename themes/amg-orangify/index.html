@@ -41,6 +41,8 @@
 			</div>
 		</div>
 
+	{% if is_front_page %}	
+
 		<div id="skills" class="container-fluid amg-area amg-skills">
 			<h1>My Skills</h1>
 			<div class="row amg-badge-collection">
@@ -123,6 +125,8 @@
 		</div>
 
 		{% include "partials/social.html" %}
+
+	{% endif %}
 
 	</section>
 	<!-- End Content -->

@@ -87,19 +87,23 @@ $(function(){
 	// ------------------------------- |
 	$(".amg-modal-trigger").on("click", function(){
 		var modal = $(this).attr("href");
+		var navOpen = $('.amg-mobile-nav').hasClass('open');
 
-		overlay
-			.add(contacts)
-			.add(modal)
-		.addClass("open");
+		contacts.add(modal).addClass("open");
+
+		if (!navOpen) {
+			overlay.addClass("open");
+		}
 	});
 	$(".amg-modal-closer").on("click", function(){
 		var modal = $(this).attr("href");
-		
-		overlay
-			.add(contacts)
-			.add(modal)
-		.removeClass("open");
+		var navOpen = $('.amg-mobile-nav').hasClass('open');
+
+		contacts.add(modal).removeClass("open");
+
+		if (!navOpen) {
+			overlay.removeClass("open");
+		}
 	});
 
 	var tablet_mq = window.matchMedia( "(min-width: 385px)" );
